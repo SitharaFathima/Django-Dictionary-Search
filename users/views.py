@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login as auth_login, logout as aut
 from django.http.response import HttpResponseRedirect
 from django.contrib.auth.models import User
 
-# from users.forms import UserForm
+from users.forms import UserForm
 # from main.functions import generate_form_errors
 
 
@@ -54,7 +54,7 @@ def signup(request):
             user = authenticate(request, username=instance.username, password=instance.password)
             auth_login(request,user)
 
-            return HttpResponseRedirect(reverse("web:index"))
+            return HttpResponseRedirect(reverse("search:index"))
 
         else:
             message = generate_form_errors(form)
