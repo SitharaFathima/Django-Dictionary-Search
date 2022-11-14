@@ -4,7 +4,10 @@ import requests
 
 
 def index(request):
-    return render(request, 'index.html')
+    context = {
+        "title" : "Home Page",
+    }
+    return render(request, 'search/index.html',context=context)
 
 def word(request):
 
@@ -54,4 +57,4 @@ def word(request):
     }
 
 
-    return render(request, 'word.html', {'se': se, 'ae': ae, 'results': results})
+    return render(request, 'search/word.html', {'se': se, 'ae': ae, 'results': results})

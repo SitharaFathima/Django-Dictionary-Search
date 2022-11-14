@@ -105,7 +105,7 @@ img {
 #home .wrapper {
     
 }
-header {
+#home header {
     background-color: #dee2e6; 
     padding: 40px 140px;
     display: flex;
@@ -113,17 +113,17 @@ header {
     margin-bottom: 15px;
     justify-content: space-between;
 }
-header h1 {
+#home header h1 {
     width: 60px;
 }
-header h1 a {
+#home header h1 a {
     display: block;
 }
-header h1 a img{
+#home header h1 a img{
     display: block;
     width: 100%;
 }
-header button.login {
+#home header div.right a.login {
     background-color: green;
     padding: 10px;
     font-size: 20px;
@@ -132,10 +132,6 @@ header button.login {
     text-align: center;
     border-radius: 8px;
     display: inline-block;
-    cursor: pointer;
-}
-header a.login.my-posts {
-    margin: 0 15px 0 auto;
 }
 #home section.spotlight {
     padding: 100px 100px 0;
