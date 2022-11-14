@@ -57,7 +57,7 @@ ROOT_URLCONF = 'gingdictionary.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS' : ["templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,9 +83,26 @@ WSGI_APPLICATION = 'gingdictionary.wsgi.application'
 #    }
 #}
 
+# DATABASES = {
+#     'default': dj_database_url.config()
+# }
+
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': 'dictionary123',
+
+        'USER': 'dictionary123',
+
+        'PASSWORD': 'dictionary123',
+        
+        'HOST': 'localhost',
+
+        'PORT': ''
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -124,6 +141,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 

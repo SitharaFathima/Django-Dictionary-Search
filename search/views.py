@@ -2,9 +2,9 @@ from django.shortcuts import render
 import bs4
 import requests
 
-# Create your views here.
+
 def index(request):
-    return render(request, 'index.htm')
+    return render(request, 'index.html')
 
 def word(request):
 
@@ -54,4 +54,4 @@ def word(request):
     }
 
 
-    return render(request, 'word.htm', {'se': se, 'ae': ae, 'results': results})
+    return render(request, 'word.html', {'se': se, 'ae': ae, 'results': results})
