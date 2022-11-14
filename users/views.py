@@ -4,7 +4,7 @@ from django.http.response import HttpResponseRedirect
 from django.contrib.auth.models import User
 
 from users.forms import UserForm
-# from main.functions import generate_form_errors
+from main.functions import generate_form_errors
 
 
 def login(request):
